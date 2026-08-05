@@ -221,12 +221,15 @@ a:focus {
 .main-nav a {
   color: #fff;
   font-size: 0.95rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  transform-origin: center;
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
   color: #b0b0b0;
   text-decoration: underline;
+  transform: scale(1.15);
 }
 
 @media (max-width: 700px) {
