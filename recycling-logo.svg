@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Recycling symbol with three arrows -->
+  <g fill="#000000" stroke="#000000" stroke-width="0.5">
+    <!-- First arrow (top-left) -->
+    <path d="M50 10 L65 28 L60 28 C72 35 78 48 78 62 C78 82 62 98 42 98 L42 88 C58 88 70 76 70 62 C70 52 65 43 57 37 L62 37 Z" fill="#000000"/>
+    
+    <!-- Second arrow (bottom-left) -->
+    <path d="M35 85 L20 67 L25 67 C13 60 7 47 7 33 C7 13 23 2 42 2 L42 12 C26 12 14 24 14 38 C14 48 19 57 28 63 L23 63 Z" fill="#000000"/>
+    
+    <!-- Third arrow (right) -->
+    <path d="M65 40 L80 22 L75 25 C83 32 88 44 88 57 C88 77 72 93 52 93 L52 83 C68 83 80 71 80 57 C80 47 76 38 70 31 L75 34 Z" fill="#000000"/>
+  </g>
+</svg>
