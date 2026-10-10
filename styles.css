@@ -315,7 +315,7 @@ a:focus {
 }
 
 .hero-logo {
-  width: clamp(5rem, 16vw, 11rem);
+  width: clamp(5.5rem, 17vw, 12rem);
   flex-shrink: 0;
 }
 
@@ -329,15 +329,22 @@ a:focus {
 
 @media (max-width: 640px) {
   .hero-title {
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .hero-logo {
-    width: clamp(2rem, 11vw, 5rem);
+  .hero-logo:last-child {
+    display: none;
+  }
+
+  .hero-logo:first-child {
+    width: clamp(6rem, 24vw, 9rem);
   }
 
   .hero h1 {
     font-size: clamp(1.25rem, 5.8vw, 2.4rem);
+    white-space: normal;
   }
 }
 
