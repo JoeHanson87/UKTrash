@@ -302,16 +302,29 @@ a:focus {
 }
 
 .hero-title {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   justify-content: center;
   gap: clamp(0.75rem, 3vw, 2rem);
   margin-bottom: 1.5rem;
 }
 
+.hero-title h1 {
+  white-space: nowrap;
+}
+
 .hero-logo {
   width: clamp(5rem, 16vw, 11rem);
   flex-shrink: 0;
+}
+
+.hero-logo:first-child {
+  justify-self: end;
+}
+
+.hero-logo:last-child {
+  justify-self: start;
 }
 
 @media (max-width: 640px) {
@@ -320,7 +333,7 @@ a:focus {
   }
 
   .hero-logo {
-    width: clamp(3rem, 13vw, 5rem);
+    width: clamp(2rem, 11vw, 5rem);
   }
 
   .hero h1 {
