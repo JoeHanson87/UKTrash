@@ -127,24 +127,6 @@ a:focus {
   padding-block: 0.35rem;
 }
 
-.logo-link {
-  display: block;
-  width: clamp(160px, 30vw, 220px);
-  padding: 0.4rem 0.5rem;
-  border-radius: var(--radius);
-  background: transparent;
-  transition: width 0.25s ease, padding 0.25s ease;
-}
-
-.site-header.shrink .logo-link {
-  width: clamp(100px, 20vw, 140px);
-  padding: 0.2rem 0.35rem;
-}
-
-.logo {
-  width: 100%;
-}
-
 .nav-toggle {
   display: none;
   background: none;
@@ -315,8 +297,35 @@ a:focus {
 
 .hero h1 {
   font-size: clamp(2.5rem, 7vw, 4rem);
-  margin: 0 0 1rem;
+  margin: 0;
   line-height: 1.1;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.75rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.hero-logo {
+  width: clamp(5rem, 16vw, 11rem);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    gap: 0.5rem;
+  }
+
+  .hero-logo {
+    width: clamp(3rem, 13vw, 5rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(1.25rem, 5.8vw, 2.4rem);
+  }
 }
 
 .lead {
@@ -670,16 +679,6 @@ a:focus {
 
   .header-inner {
     padding-block: 0.5rem;
-  }
-
-  .logo-link {
-    width: clamp(120px, 25vw, 160px);
-    padding: 0.3rem 0.4rem;
-  }
-
-  .site-header.shrink .logo-link {
-    width: clamp(90px, 18vw, 120px);
-    padding: 0.15rem 0.25rem;
   }
 
   .nav-icon {
