@@ -69,3 +69,30 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach((el) => revealObserver.observe(el));
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const lightbox = document.querySelector('.lightbox');
+  if (!lightbox) return;
+  const lightboxImg = lightbox.querySelector('img');
+  const close = () => { lightbox.hidden = true; lightboxImg.src = ''; };
+
+  document.querySelectorAll('.gallery-item').forEach((item) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      lightboxImg.src = item.getAttribute('href');
+      lightboxImg.alt = item.querySelector('img').alt;
+      lightbox.hidden = false;
+    });
+  });
+
+  lightbox.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.gallery-grid');
+  if (!track) return;
+  const step = () => track.clientWidth * 0.8;
+  document.querySelector('.gallery-prev').addEventListener('click', () => track.scrollBy({ left: -step() }));
+  document.querySelector('.gallery-next').addEventListener('click', () => track.scrollBy({ left: step() }));
+});
